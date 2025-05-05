@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,17 +9,16 @@ export default function Home() {
           <div>
             <h1>Art Institute of Chicago</h1>
           </div>
-          <a
-            className="h-full m-2 p-3 border-2 text-center hover:bg-gray-200 hover:cursor-pointer"
-            href="/posts"
-            rel="noopener noreferrer"
+          <Link
+            className="h-full m-2 p-3 border-2 text-center hover:bg-ruby-300 hover:font-bold hover:cursor-pointer"
+            href="/artworks"
           >
-            Search our art
-          </a>
+            Search our Art
+          </Link>
         </div>
       </main>
       <footer className="fixed bottom-px w-full py-5 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://api.artic.edu/docs/"
           target="_blank"
@@ -32,10 +32,10 @@ export default function Home() {
             height={16}
           />
           API Docs
-        </a>
-        <a
+        </Link>
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/posts"
+          href="/artworks"
           rel="noopener noreferrer"
         >
           <Image
@@ -46,8 +46,8 @@ export default function Home() {
             height={16}
           />
           See Art
-        </a>
-        <a
+        </Link>
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://www.artic.edu/"
           target="_blank"
@@ -61,7 +61,7 @@ export default function Home() {
             height={16}
           />
           Go to artic.edu →
-        </a>
+        </Link>
       </footer>
     </div>
   );
