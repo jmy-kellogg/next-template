@@ -7,7 +7,7 @@ export default async function Artwork({
   const { id } = await params;
   const resp = await fetch(`http://localhost:3000/api/artworks/${id}`);
   const artwork = await resp.json();
-  console.log(artwork);
+
   return (
     <div className="m-5">
       <div className="justify-self-center">
